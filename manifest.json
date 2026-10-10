@@ -1,0 +1,11 @@
+{
+  "name": "Bangla AI — সহজ বাংলা সহকারী",
+  "short_name": "Bangla AI",
+  "description": "সহজ ও হালকা বাংলা AI সহকারী",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f7fbfa",
+  "theme_color": "#0f766e",
+  "lang": "bn",
+  "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f766e" />
+  <meta name="description" content="সহজ ও হালকা বাংলা AI সহকারী — আপনার ব্রাউজারেই চলে।" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Bangla AI — সহজ বাংলা সহকারী</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Bangla AI হোম">
+        <span class="brand-mark" aria-hidden="true">বা</span>
+        <span class="brand-copy"><strong>Bangla AI</strong><small>সহজ কথার সহজ সঙ্গী</small></span>
+      </a>
+      <div class="topbar-actions">
+        <span class="status-pill"><span class="status-dot"></span> ব্রাউজারে চলছে</span>
+        <button class="icon-button" id="clearButton" type="button" title="বর্তমান চ্যাট পরিষ্কার করুন" aria-label="বর্তমান চ্যাট পরিষ্কার করুন">↺</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="intro-panel">
+        <div class="eyebrow">একদম হালকা · ১০০% বাংলা</div>
+        <h1>প্রশ্ন করুন,<br /><em>সহজ উত্তর</em> পান।</h1>
+        <p class="intro-text">সাধারণ কথা, ছোটখাটো হিসাব আর দৈনন্দিন প্রশ্নে দ্রুত সাহায্য করার জন্য তৈরি। কোনো অ্যাপ বা ইনস্টলেশন লাগবে না।</p>
+        <div class="feature-list">
+          <div class="feature-item"><span class="feature-icon">⚡</span><span><b>দ্রুত</b><small>কম শক্তির ডিভাইসেও স্বচ্ছন্দ</small></span></div>
+          <div class="feature-item"><span class="feature-icon">◌</span><span><b>ব্যক্তিগত</b><small>আপনার কথা এই ব্রাউজারেই থাকে</small></span></div>
+          <div class="feature-item"><span class="feature-icon feature-bangla">বাংলা</span><span><b>সরল</b><small>সহজ ভাষায়, ছোট উত্তর</small></span></div>
+        </div>
+        <div class="limit-note"><span class="note-symbol">i</span><p>এটি একটি ছোট সহকারী। জটিল গবেষণা, লাইভ খবর বা উচ্চ-স্তরের কাজের জন্য এটি তৈরি নয়।</p></div>
+      </aside>
+
+      <section class="chat-card" aria-label="বাংলা AI চ্যাট">
+        <div class="chat-header">
+          <div><div class="chat-title-row"><span class="mini-orb"></span><h2>আজ কী নিয়ে কথা বলব?</h2></div><p id="memoryLabel">সাম্প্রতিক কথাগুলো মনে রাখা হচ্ছে</p></div>
+          <button class="new-chat-button" id="newChatButton" type="button"><span>＋</span> নতুন কথা</button>
+        </div>
+        <div class="suggestion-row" id="suggestions" aria-label="দ্রুত প্রশ্ন">
+          <button type="button" data-prompt="তুমি কী করতে পারো?">তুমি কী করতে পারো?</button>
+          <button type="button" data-prompt="আজকের তারিখ কত?">আজকের তারিখ</button>
+          <button type="button" data-prompt="১২৫ + ৩৭ কত?">একটা হিসাব করি</button>
+        </div>
+        <div class="messages" id="messages" role="log" aria-live="polite" aria-label="কথোপকথন">
+          <article class="message assistant-message welcome-message">
+            <div class="avatar" aria-hidden="true">বা</div>
+            <div class="bubble-wrap"><span class="message-label">Bangla AI · এখন</span><div class="bubble"><p>হ্যালো! আমি আপনার ছোট বাংলা সহকারী। সাধারণ কোনো প্রশ্ন লিখুন—আমি যতটা পারি সহজ করে উত্তর দেব।</p></div></div>
+          </article>
+        </div>
+        <div class="composer-area">
+          <form class="composer" id="chatForm">
+            <label class="sr-only" for="messageInput">আপনার প্রশ্ন লিখুন</label>
+            <textarea id="messageInput" rows="1" maxlength="500" placeholder="এখানে বাংলায় লিখুন..." autocomplete="off"></textarea>
+            <div class="composer-bottom"><span class="helper-text"><kbd>Enter</kbd> পাঠান · <kbd>Shift + Enter</kbd> নতুন লাইন</span><div class="composer-actions"><span class="char-count" id="charCount">০ / ৫০০</span><button class="send-button" id="sendButton" type="submit" aria-label="বার্তা পাঠান"><span>পাঠান</span><span aria-hidden="true">↗</span></button></div></div>
+          </form>
+          <p class="privacy-line"><span>⌁</span> কোনো সার্ভারে পাঠানো হয় না · এই ডিভাইসেই সংরক্ষিত</p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><span>Bangla AI</span><span>•</span><span>সহজ রাখি, কাজে লাগাই</span><span class="footer-spacer"></span><span>হালকা মোড সক্রিয়</span></footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
